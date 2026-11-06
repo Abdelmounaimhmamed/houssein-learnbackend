@@ -33,8 +33,8 @@ export default function Home() {
       const errorEmail = errorMessage.email;
       const errorPassword = errorMessage.password;
 
-      if (errorPassword) toast.error(`Password : ${errorPassword}`);
-      if (errorEmail) toast.error(`Email : ${errorEmail}`);
+      if (errorEmail) toast.error(`Email : ${errorEmail?.[0]}`);
+      if (errorPassword) toast.error(`Password : ${errorPassword?.[0]}`);
       return;
     }
 
