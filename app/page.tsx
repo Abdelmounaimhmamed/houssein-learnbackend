@@ -38,9 +38,13 @@ export default function Home() {
       return;
     }
 
-    const request = await axios.post("/api/user", formData);
-    console.log("Message renvoye :", request.data.message);
-    console.log("data :", request.data.data.email?.[0]);
+    try {
+      const request = await axios.post("/api/user", formData);
+      console.log("Message renvoye :", request.data.message);
+      console.log("data :", request.data.data.email?.[0]);
+    } catch (error) {
+      console.log("Erreur axios.post");
+    }
   };
 
   return (
