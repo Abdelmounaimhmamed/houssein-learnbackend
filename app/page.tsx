@@ -48,23 +48,23 @@ export default function Home() {
       <Toaster position="top-left" reverseOrder={false} />
 
       <form onSubmit={HandleSubmit}>
-        <label htmlFor=""></label>
+        <label htmlFor="Email"></label>
 
         <input
           onChange={(e) => setEmail(e.target.value)}
           type="email"
-          name=""
-          id=""
+          name="email"
+          id="idEmail"
         />
 
-        <label htmlFor=""></label>
+        <label htmlFor="Password"></label>
         <input
           onChange={(e) => {
             setPassword(e.target.value);
           }}
           type="password"
-          name=""
-          id=""
+          name="password"
+          id="idPassword"
         />
 
         <button type="submit"> Submit</button>
