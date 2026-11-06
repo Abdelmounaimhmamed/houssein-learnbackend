@@ -35,6 +35,7 @@ export default function Home() {
 
       if (errorPassword) toast.error(`Password : ${errorPassword}`);
       if (errorEmail) toast.error(`Email : ${errorEmail}`);
+      return;
     }
 
     const request = await axios.post("/api/user", formData);
